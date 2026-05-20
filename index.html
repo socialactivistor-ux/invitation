@@ -1,18 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Open Links</title>
-  <script>
-    window.onload = function () {
-      window.open("https://calendar.app.google/fwpEC8Q1yUB1LTtC9", "_blank");
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-      setTimeout(function () {
-        window.location.href = "https://youtube.com/shorts/BDxF6eckwUQ";
-      }, 1500);
-    };
-  </script>
+<title>Keerthik ❤️ Monika Wedding Reception</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:#000;
+    height:100vh;
+}
+
+/* VIDEO */
+
+.video-container{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    pointer-events:none;
+}
+
+/* DARK OVERLAY */
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    top:0;
+    left:0;
+    z-index:2;
+}
+
+/* CONTENT */
+
+.content{
+    position:absolute;
+    z-index:3;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    width:90%;
+}
+
+.invite{
+    letter-spacing:4px;
+    font-size:14px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+h1{
+    font-size:58px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.date{
+    font-size:18px;
+    margin-bottom:35px;
+    font-weight:300;
+}
+
+.btn{
+    border:none;
+    background:white;
+    color:black;
+    padding:16px 40px;
+    border-radius:60px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    background:#f6d7a8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:36px;
+        line-height:1.3;
+    }
+
+    .date{
+        font-size:16px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:300px;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
-  <h2>Opening links...</h2>
+
+<div class="video-container">
+
+    <!-- YouTube Background Video -->
+    <iframe
+        src="https://www.youtube.com/embed/BDxF6eckwUQ?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=BDxF6eckwUQ&playsinline=1"
+        allow="autoplay"
+        allowfullscreen>
+    </iframe>
+
+    <div class="overlay"></div>
+
+</div>
+
+<div class="content">
+
+    <div class="invite">
+        Wedding Reception Invitation
+    </div>
+
+    <h1>
+        Keerthik ❤️ Monika
+    </h1>
+
+    <div class="date">
+        Together with our families,<br>
+        we invite you to celebrate our special day
+    </div>
+
+    <button class="btn" onclick="openInvite()">
+        Open Calendar Invitation
+    </button>
+
+</div>
+
+<script>
+
+function openInvite(){
+
+    // Open Google Calendar Invite
+    window.location.href =
+    "https://calendar.app.google/RoCL3fj8qG7PVg629";
+
+}
+
+</script>
+
 </body>
 </html>
